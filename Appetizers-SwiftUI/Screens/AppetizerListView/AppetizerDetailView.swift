@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
 
-  //    @EnvironmentObject var order: Order
+  @EnvironmentObject var order: Order
 
   let appetizer: Appetizer
   @Binding var isShowingDetail: Bool
@@ -40,13 +40,13 @@ struct AppetizerDetailView: View {
       Spacer()
 
       Button {
-        //                order.add(appetizer)
+        order.add(appetizer)
         isShowingDetail = false
       } label: {
-        APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
-        //        Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
+        //                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
+        Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
       }
-      //            .modifier(StandardButtonStyle())
+      .modifier(StandardButtonStyle())
       //            .standardButtonStyle()
       //            .buttonStyle(.bordered)
       //            .tint(.brandPrimary)
@@ -66,6 +66,14 @@ struct AppetizerDetailView: View {
   }
 }
 
+struct AppetizerDetailView_Previews: PreviewProvider {
+  static var previews: some View {
+    AppetizerDetailView(
+      appetizer: MockData.sampleAppetizer,
+      isShowingDetail: .constant(true))
+  }
+}
+
 struct NutritionInfo: View {
 
   let title: String
@@ -82,14 +90,5 @@ struct NutritionInfo: View {
         .fontWeight(.semibold)
         .italic()
     }
-  }
-}
-
-struct AppetizerDetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    AppetizerDetailView(
-      appetizer: MockData.sampleAppetizer,
-      isShowingDetail: .constant(true)
-    )
   }
 }

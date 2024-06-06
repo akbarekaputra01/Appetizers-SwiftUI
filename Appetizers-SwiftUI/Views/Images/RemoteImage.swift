@@ -8,11 +8,12 @@
 import SwiftUI
 
 final class ImageLoader: ObservableObject {
+
   @Published var image: Image? = nil
 
   func load(fromURLString urlString: String) {
     NetworkManager.shared.downloadImage(fromURLString: urlString) { uiImage in
-      guard let uiImage = uiImage else { return }
+      guard let uiImage else { return }
       DispatchQueue.main.async {
         self.image = Image(uiImage: uiImage)
       }
@@ -21,20 +22,16 @@ final class ImageLoader: ObservableObject {
 }
 
 struct RemoteImage: View {
+
   var image: Image?
 
   var body: some View {
-    image?
-      .resizable()
-      .aspectRatio(contentMode: .fit)
-
-      ?? Image("food-placeholder")
-      .resizable()
-      .aspectRatio(contentMode: .fit)
+    image?.resizable() ?? Image("food-placeholder").resizable()
   }
 }
 
 struct AppetizerRemoteImage: View {
+
   @StateObject var imageLoader = ImageLoader()
   let urlString: String
 
@@ -42,10 +39,4 @@ struct AppetizerRemoteImage: View {
     RemoteImage(image: imageLoader.image)
       .onAppear { imageLoader.load(fromURLString: urlString) }
   }
-}
-
-#Preview{
-  AppetizerRemoteImage(
-    urlString:
-      "https://seanallen-course-backend.herokuapp.com/images/appetizers/blackened-shrimp.jpg")
 }

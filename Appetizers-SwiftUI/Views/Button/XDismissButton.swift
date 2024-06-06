@@ -16,13 +16,15 @@ struct XDismissButton: View {
         .opacity(0.6)
 
       Image(systemName: "xmark")
-        .imageScale(.medium)
+        .imageScale(.small)
         .frame(width: 44, height: 44)
         .foregroundColor(.black)
     }
   }
 }
 
-#Preview{
-  XDismissButton()
+struct XDismissButton_Previews: PreviewProvider {
+  static var previews: some View {
+    XDismissButton()
+  }
 }

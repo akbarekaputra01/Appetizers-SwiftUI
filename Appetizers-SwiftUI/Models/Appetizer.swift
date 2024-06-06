@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Appetizer: Codable, Identifiable {
+struct Appetizer: Decodable, Identifiable {
   let id: Int
   let name: String
   let description: String
@@ -23,18 +23,48 @@ struct AppetizerResponse: Decodable {
 }
 
 struct MockData {
-  static let sampleAppetizer = Appetizer(
-    id: 1,
-    name: "Name of appetizer",
-    description: "This is description of appetizer. yummy!",
-    price: 99.9,
-    imageURL: "",
-    calories: 87,
-    protein: 90,
-    carbs: 57
-  )
 
-  static let appetizers = [
-    sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer,
-  ]
+  static let sampleAppetizer = Appetizer(
+    id: 0001,
+    name: "Test Appetizer",
+    description: "This is the description for my appetizer. It's yummy.",
+    price: 9.99,
+    imageURL: "",
+    calories: 99,
+    protein: 99,
+    carbs: 99)
+
+  static let appetizers = [sampleAppetizer, sampleAppetizer, sampleAppetizer, sampleAppetizer]
+
+  static let orderItemOne = Appetizer(
+    id: 0001,
+    name: "Test Appetizer One",
+    description: "This is the description for my appetizer. It's yummy.",
+    price: 9.99,
+    imageURL: "",
+    calories: 99,
+    protein: 99,
+    carbs: 99)
+
+  static let orderItemTwo = Appetizer(
+    id: 0002,
+    name: "Test Appetizer Two",
+    description: "This is the description for my appetizer. It's yummy.",
+    price: 9.99,
+    imageURL: "",
+    calories: 99,
+    protein: 99,
+    carbs: 99)
+
+  static let orderItemThree = Appetizer(
+    id: 0003,
+    name: "Test Appetizer Three",
+    description: "This is the description for my appetizer. It's yummy.",
+    price: 9.99,
+    imageURL: "",
+    calories: 99,
+    protein: 99,
+    carbs: 99)
+
+  static let orderItems = [orderItemOne, orderItemTwo, orderItemThree]
 }

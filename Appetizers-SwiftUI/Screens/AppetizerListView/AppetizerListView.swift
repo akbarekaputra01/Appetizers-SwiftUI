@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AppetizerListView: View {
+
   @StateObject var viewModel = AppetizerListViewModel()
-  //  @State private var isShowingDetail: Bool = true
 
   var body: some View {
     ZStack {
@@ -35,8 +35,7 @@ struct AppetizerListView: View {
       if viewModel.isShowingDetail {
         AppetizerDetailView(
           appetizer: viewModel.selectedAppetizer!,
-          isShowingDetail: $viewModel.isShowingDetail
-        )
+          isShowingDetail: $viewModel.isShowingDetail)
       }
 
       if viewModel.isLoading {
@@ -47,13 +46,13 @@ struct AppetizerListView: View {
       Alert(
         title: alertItem.title,
         message: alertItem.message,
-        dismissButton: alertItem.dismissButton
-      )
+        dismissButton: alertItem.dismissButton)
     }
   }
-
 }
 
-#Preview{
-  AppetizerListView()
+struct AppetizerListView_Previews: PreviewProvider {
+  static var previews: some View {
+    AppetizerListView()
+  }
 }
