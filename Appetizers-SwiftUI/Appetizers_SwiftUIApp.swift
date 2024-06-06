@@ -13,7 +13,7 @@ struct Appetizers_SwiftUIApp: App {
 
   var body: some Scene {
     WindowGroup {
-      AppetizerTabView(order: order).environmentObject(order)
+      AppetizerTabView().environmentObject(order)
     }
   }
 }

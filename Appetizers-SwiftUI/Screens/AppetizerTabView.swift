@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppetizerTabView: View {
 
-  var order: Order
+  @EnvironmentObject var order: Order
 
   var body: some View {
     TabView {
@@ -28,6 +28,6 @@ struct AppetizerTabView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    AppetizerTabView(order: Order()).environmentObject(Order())
+    AppetizerTabView().environmentObject(Order())
   }
 }
