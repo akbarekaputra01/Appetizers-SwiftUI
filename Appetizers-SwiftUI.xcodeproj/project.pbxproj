@@ -46,6 +46,7 @@
 		6594D0D02C06EC9F009E30CB /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		6594D0D22C070CA8009E30CB /* AppertizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppertizerListViewModel.swift; sourceTree = "<group>"; };
 		6594D0D42C071021009E30CB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		65A817CA2C12A34800314A12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65C1DE182C11C7000076F562 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		65C1DE1A2C11C8340076F562 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		65C1DE1C2C11CA160076F562 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 		65E4B92C2C04C2A2008AE609 = {
 			isa = PBXGroup;
 			children = (
+				65A817CA2C12A34800314A12 /* README.md */,
 				65E4B9372C04C2A2008AE609 /* Appetizers-SwiftUI */,
 				65E4B9362C04C2A2008AE609 /* Products */,
 			);
