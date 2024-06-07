@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StandardButtonStyle: ViewModifier {
-
   func body(content: Content) -> some View {
     content
       .buttonStyle(.bordered)
@@ -21,4 +20,18 @@ extension View {
   func standardButtonStyle() -> some View {
     self.modifier(StandardButtonStyle())
   }
+}
+
+// example
+struct ContentView: View {
+  var body: some View {
+    Button("Tap Me") {
+      // action
+    }
+    .standardButtonStyle()  // using standard style button defined
+  }
+}
+
+#Preview{
+  ContentView()
 }

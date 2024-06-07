@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ActivityIndicator: UIViewRepresentable {
-
   func makeUIView(context: Context) -> UIActivityIndicatorView {
     let activityIndicatorView = UIActivityIndicatorView(style: .large)
     activityIndicatorView.color = UIColor.uiColorbrandPrimary
@@ -30,4 +29,8 @@ struct LoadingView: View {
         .scaleEffect(2)
     }
   }
+}
+
+#Preview{
+  LoadingView()
 }

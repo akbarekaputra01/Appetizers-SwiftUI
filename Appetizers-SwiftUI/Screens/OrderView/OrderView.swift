@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct OrderView: View {
-
   @EnvironmentObject var order: Order
 
   var body: some View {
@@ -46,6 +45,6 @@ struct OrderView: View {
 
 struct OrderView_Previews: PreviewProvider {
   static var previews: some View {
-    OrderView()
+    OrderView().environmentObject(Order())
   }
 }

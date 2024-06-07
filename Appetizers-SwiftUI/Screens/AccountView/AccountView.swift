@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AccountView: View {
-
   @StateObject var viewModel = AccountViewModel()
   @FocusState private var focusedTextField: FormTextField?
 

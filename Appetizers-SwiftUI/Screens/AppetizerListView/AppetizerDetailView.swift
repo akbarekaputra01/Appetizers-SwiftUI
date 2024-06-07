@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AppetizerDetailView: View {
-
   @EnvironmentObject var order: Order
 
   let appetizer: Appetizer
@@ -70,12 +69,12 @@ struct AppetizerDetailView_Previews: PreviewProvider {
   static var previews: some View {
     AppetizerDetailView(
       appetizer: MockData.sampleAppetizer,
-      isShowingDetail: .constant(true))
+      isShowingDetail: .constant(true)
+    ).environmentObject(Order())
   }
 }
 
 struct NutritionInfo: View {
-
   let title: String
   let value: String
 

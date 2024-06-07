@@ -8,7 +8,6 @@
 import SwiftUI
 
 final class Order: ObservableObject {
-
   @Published var items: [Appetizer] = []
 
   var totalPrice: Double {
